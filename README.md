@@ -15,3 +15,6 @@ npm start
 ```
 =======
 
+Demo
+
+http://kino-anglr2.rhcloud.com/index.html
