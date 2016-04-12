@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 # Angular 2 OPAP Kino-like game
 
 ## Description
