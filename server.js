@@ -7,9 +7,19 @@ var server_ip_address = process.env.OPENSHIFT_NODEJS_IP || '127.0.0.1'
 var appDev = 'dev/';
 var appProd = 'app/';
 
+var assetsDev = 'assets/';
+var assetsProd = 'src/';
+
 var gulp = require('gulp');
 var sourcemaps = require('gulp-sourcemaps');
 var typescript = require('gulp-typescript');
+var ext_replace = require('gulp-ext-replace');
+
+var postcss = require('gulp-postcss');
+var autoprefixer = require('autoprefixer');
+var precss = require('precss');
+var cssnano = require('cssnano');
+
 var tsProject = typescript.createProject('tsconfig.json');
 
 var http = require("http");
@@ -25,6 +35,12 @@ gulp.src(appDev + '**/*.ts')
     //.pipe(jsuglify())
     .pipe(gulp.dest(appProd));
 
+gulp.src(assetsDev + 'scss/*.scss')
+        .pipe(sourcemaps.init())
+        .pipe(postcss([precss, autoprefixer, cssnano]))
+        .pipe(sourcemaps.write())
+        .pipe(ext_replace('.css'))
+        .pipe(gulp.dest(assetsProd + 'css/'));
 
 http.createServer( function(req, res) {
 
