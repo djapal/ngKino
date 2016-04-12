@@ -1,25 +1,17 @@
 <<<<<<< HEAD
-# Angular 2 Beta Boilerplate
+# Angular 2 OPAP Kino-like game
 
 ## Description
-This repository acts as a very simple Angular 2 Beta Boilerplate with which you can get started developing Angular 2 immediately.
-It is derived from the official Angular 2 Documentation which can be found [here](https://angular.io/docs/ts/latest/quickstart.html).
-## Usage
-Follow the following steps and you're good to go! Important: Typescript and npm has to be installed on your machine!
+A Kino-like game in angular 2. Select 10 numbers and see how many you got!
 
-1: Clone repo
-```
-git clone https://github.com/mschwarzmueller/angular-2-beta-boilerplate.git
-```
-2: Install packages
+
+1: Install packages
 ```
 npm install
 ```
-3: Start server (includes auto refreshing) and gulp watcher
+2: Start server (includes auto refreshing) and gulp watcher
 ```
 npm start
 ```
 =======
-# kino-angular2
-OPAP Kino-like game
->>>>>>> b3a32c072fad3ecb675d0cec7cbd8e47dbf4ae47
+
