@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Angular 2 Beta Boilerplate
 
 ## Description
@@ -18,3 +19,7 @@ npm install
 ```
 npm start
 ```
+=======
+# kino-angular2
+OPAP Kino-like game
+>>>>>>> b3a32c072fad3ecb675d0cec7cbd8e47dbf4ae47
