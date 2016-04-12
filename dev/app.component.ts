@@ -8,8 +8,7 @@ import {Observable} from 'rxjs/Rx';
 @Component({
     selector: 'my-app',
     template: `
-        <h1>Angular 2 Boilerplate</h1>
-        <p><input type="text" #inp1 (keyup)="enterLeftText($event, inp1)"/></p>
+        <h1>Angular 2 Kino</h1>
         <label>{{leftText}}</label>
         <div class="container">
             <div *ngFor="#num of numbers" class="col-md-15">
@@ -28,10 +27,6 @@ export class AppComponent implements OnInit {
 
     ngOnInit():any {
         this._numbersService.getNumbers().then(numbers => this.numbers = numbers);
-    }
-
-    enterLeftText($event, inp1) {
-        this.leftText = 'typed ' + inp1.value;
     }
 
     getNextNumber() {

@@ -4,11 +4,27 @@
 var server_port = process.env.OPENSHIFT_NODEJS_PORT || 8080
 var server_ip_address = process.env.OPENSHIFT_NODEJS_IP || '127.0.0.1'
 
+var appDev = 'dev/';
+var appProd = 'app/';
+
+var gulp = require('gulp');
+var sourcemaps = require('gulp-sourcemaps');
+var typescript = require('gulp-typescript');
+var tsProject = typescript.createProject('tsconfig.json');
+
 var http = require("http");
 var path = require("path"); 
 var fs = require("fs"); 		
 
 console.log("Starting web server at " + server_ip_address + ":" + server_port);
+
+gulp.src(appDev + '**/*.ts')
+    .pipe(sourcemaps.init())
+    .pipe(typescript(tsProject))
+    .pipe(sourcemaps.write())
+    //.pipe(jsuglify())
+    .pipe(gulp.dest(appProd));
+
 
 http.createServer( function(req, res) {
 
