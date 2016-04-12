@@ -4,9 +4,10 @@
   "scripts": {
     "lite": "lite-server",
     "gulp": "gulp",
-    "start": "concurrent \"npm run gulp\" \"npm run lite\" ",
-    "typings" : "typings"
+    "typings" : "typings",
+     "start": "node server.js"
   },
+  "main": "server.js",
   "license": "ISC",
   "dependencies": {
     "angular2": "2.0.0-beta.13",

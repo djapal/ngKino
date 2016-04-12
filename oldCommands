@@ -1,0 +1,2 @@
+    "postinstall": "npm run typings install",
+    "start": "concurrent \"npm run gulp\" \"npm run lite\" "
