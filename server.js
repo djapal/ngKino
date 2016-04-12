@@ -1,14 +1,14 @@
 // A very basic web server in node.js
 // Stolen from: Node.js for Front-End Developers by Garann Means (p. 9-10) 
 
-var port = 8000;
-var serverUrl = "127.0.0.1";
+var server_port = process.env.OPENSHIFT_NODEJS_PORT || 8080
+var server_ip_address = process.env.OPENSHIFT_NODEJS_IP || '127.0.0.1'
 
 var http = require("http");
 var path = require("path"); 
 var fs = require("fs"); 		
 
-console.log("Starting web server at " + serverUrl + ":" + port);
+console.log("Starting web server at " + server_ip_address + ":" + server_port);
 
 http.createServer( function(req, res) {
 
@@ -46,7 +46,7 @@ http.createServer( function(req, res) {
 		console.log("Invalid file extension detected: " + ext)
 	}
 
-}).listen(port, serverUrl);
+}).listen(server_port, server_ip_address);
 
 function getFile(localPath, res, mimeType) {
 	fs.readFile(localPath, function(err, contents) {
