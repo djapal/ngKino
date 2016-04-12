@@ -2,7 +2,6 @@
   "name": "angular2-kino",
   "version": "1.0.0",
   "scripts": {
-    "postinstall": "npm run typings install",
     "lite": "lite-server",
     "gulp": "gulp",
     "start": "concurrent \"npm run gulp\" \"npm run lite\" ",
