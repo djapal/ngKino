@@ -29,7 +29,17 @@ body {
   }
 }
 
+.unselectable {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
 .kino-number-default {
+  @extend .unselectable;
   font-size: 70px;
   font-weight: bold;
   color: darkgrey;
@@ -38,27 +48,29 @@ body {
 }
 
 .kino-number-selected {
+  @extend .unselectable;
   color: black;
   background-image: -moz-radial-gradient(45px 45px 45deg, circle cover, blue 0%, #0b97c4 100%, red 95%);
   background-image: -webkit-radial-gradient(45px 45px, circle cover, blue, #0b97c4);
-  background-image: radial-gradient(45px 45px 45deg, circle cover, blue 0%, #0b97c4 100%, red 95%);
-
+  background-image: radial-gradient(circle at 45px 45px, blue 0%, #0b97c4 100%, red 95%);
   border-radius: 50%;
 }
 
 .kino-number-chosen {
+  @extend .unselectable;
   color: black;
   background-image: -moz-radial-gradient(45px 45px 45deg, circle cover, yellow 0%, orange 100%, red 95%);
   background-image: -webkit-radial-gradient(45px 45px, circle cover, yellow, orange);
-  background-image: radial-gradient(45px 45px 45deg, circle cover, yellow 0%, orange 100%, red 95%);
+  background-image: radial-gradient(circle at 45px 45px, yellow 0%, orange 100%, red 95%);
   border-radius: 50%;
 }
 
 .kino-number-matched {
+  @extend .unselectable;
   color: black;
   background-image: -moz-radial-gradient(45px 45px 45deg, circle cover, Chartreuse 0%, green 100%, red 95%);
   background-image: -webkit-radial-gradient(45px 45px, circle cover, Chartreuse, green);
-  background-image: radial-gradient(45px 45px 45deg, circle cover, Chartreuse 0%, green 100%, red 95%);
+  background-image: radial-gradient(circle at 45px 45px, Chartreuse 0%, green 100%, red 95%);
   border-radius: 50%;
 }
 

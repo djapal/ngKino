@@ -1,6 +1,5 @@
-import {Component} from 'angular2/core';
-import {OnInit} from "angular2/core";
-import {Router} from "angular2/router";
+import {Component} from '@angular/core';
+import {OnInit} from "@angular/core";
 import {NumbersService} from "./numbers.service";
 import {KinoNumber} from "./kinonumber";
 import {Observable} from 'rxjs/Rx';
@@ -47,15 +46,6 @@ export class AppComponent implements OnInit {
         }
         if (this.selectedNumbers.length == 10) {
             this.selectedNumbers.push(-1);
-/*            Observable.interval(1000).take(8).subscribe((t) => {
-                console.log('xxxxxxx ' + t);
-                Observable.interval(300)
-                    .take(3)
-                    .subscribe((x) => {
-                        console.log('-------- ' + x, new Date());
-                    });
-            });*/
-
 
             Observable.interval(1500)
                 .take(20)
@@ -71,7 +61,6 @@ export class AppComponent implements OnInit {
                         var num = this.numbers.find(nm => nm.id === finalChoice);
                         num.isChosen = true;
                         chosenNums.push(num);
-                        console.log('finalChoice ', finalChoice);
                         if (t === 2) {
                             this.systemChosenNumbers.push(finalChoice);
                             /*                    var y = Math.floor(Math.random() * 81);
@@ -79,9 +68,6 @@ export class AppComponent implements OnInit {
                              while (this.systemChosenNumbers.indexOf(y) > -1 || (y === 0)) {
                              y = Math.floor(Math.random() * 81);
                              }*/
-
-                            console.log(finalChoice, finalChoice in this.systemChosenNumbers);
-
                             var num = this.numbers.find(nm => nm.id === finalChoice);
                             num.isChosen = true;
                             if (this.selectedNumbers.find(id => id === finalChoice)) {

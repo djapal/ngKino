@@ -2,4 +2,5 @@
 /app
 /src
 /nbproject/private/
-./oldCommands
+/.idea
+npm-debug.log
