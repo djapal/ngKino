@@ -9,9 +9,9 @@ A Kino-like game in angular 2. Select 10 numbers and see how many you got!
 ```
 npm install
 ```
-2: Start server (includes auto refreshing) and gulp watcher
+2: Start server (server.js file OpenShift-compatible)
 ```
-npm start
+node server.js
 ```
 =======
 
