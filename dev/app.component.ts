@@ -10,7 +10,7 @@ import {Observable} from 'rxjs/Rx';
         <h1>Angular 2 Kino</h1>
         <label>{{leftText}}</label>
         <div class="container">
-            <div *ngFor="#num of numbers" class="col-md-15">
+            <div *ngFor="let num of numbers" class="col-md-15 col-sm-15">
                 <div class="kino-number-default" [ngClass]="{'kino-number-selected': num.isSelected, 'kino-number-chosen': num.isChosen, 'kino-number-matched': num.isMatched}" (click)="addNumber(num)">{{num.id}}<div>
             </div>
         </div>

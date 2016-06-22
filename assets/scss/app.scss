@@ -45,6 +45,12 @@ body {
   color: darkgrey;
   text-align: center;
   cursor: pointer;
+  @media (min-width: 768px) {
+      font-size: 52px;  
+  }
+  @media (min-width: 992px) {
+     font-size: 70px;   
+  }
 }
 
 .kino-number-selected {
