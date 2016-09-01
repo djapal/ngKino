@@ -6,21 +6,12 @@ import {Observable} from 'rxjs/Rx';
 
 @Component({
     selector: 'my-app',
-    template: `
-        <h1>Angular 2 Kino</h1>
-        <label>{{leftText}}</label>
-        <div class="container">
-            <div *ngFor="let num of numbers" class="col-md-15 col-sm-15">
-                <div class="kino-number-default" [ngClass]="{'kino-number-selected': num.isSelected, 'kino-number-chosen': num.isChosen, 'kino-number-matched': num.isMatched}" (click)="addNumber(num)">{{num.id}}<div>
-            </div>
-        </div>
-    `,
+    templateUrl: 'app/app.component.html'
 })
 export class AppComponent implements OnInit {
     numbers: KinoNumber[];
     selectedNumbers: number[] = [];
     systemChosenNumbers: number[] = [];
-    leftText: string;
 
     constructor(private _numbersService: NumbersService) { }
 
@@ -63,11 +54,6 @@ export class AppComponent implements OnInit {
                         chosenNums.push(num);
                         if (t === 2) {
                             this.systemChosenNumbers.push(finalChoice);
-                            /*                    var y = Math.floor(Math.random() * 81);
-
-                             while (this.systemChosenNumbers.indexOf(y) > -1 || (y === 0)) {
-                             y = Math.floor(Math.random() * 81);
-                             }*/
                             var num = this.numbers.find(nm => nm.id === finalChoice);
                             num.isChosen = true;
                             if (this.selectedNumbers.find(id => id === finalChoice)) {

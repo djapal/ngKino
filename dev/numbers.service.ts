@@ -1,9 +1,9 @@
 import {Injectable} from '@angular/core';
-import {NUMBERS}     from './mock-numbers';
+import {NUMBERS}    from './mock-numbers';
 
 @Injectable()
 export class NumbersService {
-    getNumbers() {
+    getNumbers(): Promise<Number[]> {
         return Promise.resolve(NUMBERS);
     }
 

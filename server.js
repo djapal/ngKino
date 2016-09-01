@@ -32,6 +32,9 @@ gulp.src(appDev + '**/*.ts')
     .pipe(jsuglify())
     .pipe(gulp.dest(appProd));
 
+gulp.src(appDev + '**/*.html')
+    .pipe(gulp.dest(appProd));
+
 gulp.src(assetsDev + 'scss/*.scss')
         .pipe(sourcemaps.init())
         .pipe(postcss([precss, autoprefixer, cssnano]))
