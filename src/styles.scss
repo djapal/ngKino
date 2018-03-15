@@ -10,18 +10,21 @@ body {
   width: 10%;
   float: left;
 }
+
 @media (min-width: 768px) {
   .col-sm-15 {
     width: 10%;
     float: left;
   }
 }
+
 @media (min-width: 992px) {
   .col-md-15 {
     width: 10%;
     float: left;
   }
 }
+
 @media (min-width: 1200px) {
   .col-lg-15 {
     width: 10%;
@@ -38,45 +41,77 @@ body {
   user-select: none;
 }
 
+.text-center {
+  text-align: center;
+}
+
 .kino-number-default {
   @extend .unselectable;
+  @extend .font-size-background;
+
   font-size: 70px;
   font-weight: bold;
   color: darkgrey;
   text-align: center;
   cursor: pointer;
+  margin-top: 5px;
+  width: 90px;
+  height: 90px;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2px;
+}
+
+.font-size-background {
   @media (min-width: 768px) {
-      font-size: 52px;  
+    font-size: 52px;
+    width: 60px;
+    height: 60px;
+    border-radius: 30px;
   }
   @media (min-width: 992px) {
-     font-size: 70px;   
+    font-size: 70px;
+    width: 90px;
+    height: 90px;
+    border-radius: 45px;
   }
 }
 
 .kino-number-selected {
   @extend .unselectable;
+  @extend .font-size-background;
+
   color: black;
   background-image: -moz-radial-gradient(45px 45px 45deg, circle cover, blue 0%, #0b97c4 100%, red 95%);
   background-image: -webkit-radial-gradient(45px 45px, circle cover, blue, #0b97c4);
   background-image: radial-gradient(circle at 45px 45px, blue 0%, #0b97c4 100%, red 95%);
-  border-radius: 50%;
 }
 
 .kino-number-chosen {
   @extend .unselectable;
+  @extend .font-size-background;
+
   color: black;
   background-image: -moz-radial-gradient(45px 45px 45deg, circle cover, yellow 0%, orange 100%, red 95%);
   background-image: -webkit-radial-gradient(45px 45px, circle cover, yellow, orange);
   background-image: radial-gradient(circle at 45px 45px, yellow 0%, orange 100%, red 95%);
-  border-radius: 50%;
 }
 
 .kino-number-matched {
   @extend .unselectable;
+  @extend .font-size-background;
+
   color: black;
   background-image: -moz-radial-gradient(45px 45px 45deg, circle cover, Chartreuse 0%, green 100%, red 95%);
   background-image: -webkit-radial-gradient(45px 45px, circle cover, Chartreuse, green);
   background-image: radial-gradient(circle at 45px 45px, Chartreuse 0%, green 100%, red 95%);
-  border-radius: 50%;
 }
 
+.cells-block {
+/*  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;*/
+}

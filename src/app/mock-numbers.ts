@@ -1,6 +1,6 @@
-import {KinoNumber} from "./kinonumber";
+import {KinoNumber} from './kinonumber';
 
-export var NUMBERS: KinoNumber[] = [
+export let NUMBERS: KinoNumber[] = [
     new KinoNumber(1),  new KinoNumber(2),  new KinoNumber(3),  new KinoNumber(4),  new KinoNumber(5),  new KinoNumber(6),  new KinoNumber(7),  new KinoNumber(8),  new KinoNumber(9),  new KinoNumber(10),
     new KinoNumber(11), new KinoNumber(12), new KinoNumber(13), new KinoNumber(14), new KinoNumber(15), new KinoNumber(16), new KinoNumber(17), new KinoNumber(18), new KinoNumber(19), new KinoNumber(20),
     new KinoNumber(21), new KinoNumber(22), new KinoNumber(23), new KinoNumber(24), new KinoNumber(25), new KinoNumber(26), new KinoNumber(27), new KinoNumber(28), new KinoNumber(29), new KinoNumber(30),
