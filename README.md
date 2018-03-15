@@ -1,20 +1,16 @@
 
-# Angular 2 OPAP Kino-like game
+# Angular 5 OPAP Kino-like game
 
 ## Description
-A Kino-like game in angular 2. Select 10 numbers and see how many you got!
+A Kino-like game in angular 5. Select 10 numbers and see how many you got!
 
 
 1: Install packages
 ```
 npm install
 ```
-2: Start server (server.js file OpenShift-compatible)
+2: Start server
 ```
-node server.js
+ng serve --open
 ```
-=======
 
-Demo
-
-http://kino-anglr2.rhcloud.com/index.html
