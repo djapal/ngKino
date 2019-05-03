@@ -1,8 +1,8 @@
 
-# Angular 5 OPAP Kino-like game
+# Angular 7 OPAP Kino-like game
 
 ## Description
-A Kino-like game in angular 5. Select 10 numbers and see how many you got!
+A Kino-like game in angular 7. Select 10 numbers and see how many you got!
 
 
 1: Install packages
